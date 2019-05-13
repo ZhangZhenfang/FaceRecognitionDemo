@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>919</width>
+    <height>949</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>-30</y>
+      <width>771</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="videoLable">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>40</y>
+       <width>601</width>
+       <height>401</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="open">
+     <property name="geometry">
+      <rect>
+       <x>690</x>
+       <y>100</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>打开摄像头</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="capature">
+     <property name="geometry">
+      <rect>
+       <x>690</x>
+       <y>140</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>拍照</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget_2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>19</x>
+      <y>449</y>
+      <width>771</width>
+      <height>451</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="imgLable">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>10</y>
+       <width>511</width>
+       <height>431</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>670</x>
+       <y>40</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>选择图片</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>670</x>
+       <y>90</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>识别</string>
+     </property>
+    </widget>
+    <widget class="QLCDNumber" name="lcdNumber">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>260</y>
+       <width>131</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="intValue" stdset="0">
+      <number>3</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="resLable">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>220</y>
+       <width>54</width>
+       <height>12</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>识别结果：</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>919</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>open</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openStream()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>784</x>
+     <y>93</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>526</x>
+     <y>381</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>capature</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>snap()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>784</x>
+     <y>133</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>650</x>
+     <y>373</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openImage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>723</x>
+     <y>524</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>829</x>
+     <y>539</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>recognize()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>724</x>
+     <y>577</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>829</x>
+     <y>604</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>openStream()</slot>
+  <slot>snap()</slot>
+  <slot>openImage()</slot>
+  <slot>recognize()</slot>
+ </slots>
+</ui>
