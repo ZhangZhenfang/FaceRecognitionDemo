@@ -23,7 +23,7 @@
       <height>461</height>
      </rect>
     </property>
-    <widget class="QLabel" name="videoLable">
+    <widget class="QLabel" name="videoLabel">
      <property name="geometry">
       <rect>
        <x>50</x>
@@ -75,7 +75,7 @@
       <height>451</height>
      </rect>
     </property>
-    <widget class="QLabel" name="imgLable">
+    <widget class="QLabel" name="imgLabel">
      <property name="geometry">
       <rect>
        <x>50</x>
@@ -114,7 +114,7 @@
       <string>识别</string>
      </property>
     </widget>
-    <widget class="QLCDNumber" name="lcdNumber">
+    <widget class="QLCDNumber" name="resultNumber">
      <property name="geometry">
       <rect>
        <x>620</x>
@@ -127,7 +127,7 @@
       <number>3</number>
      </property>
     </widget>
-    <widget class="QLabel" name="resLable">
+    <widget class="QLabel" name="resultLabel">
      <property name="geometry">
       <rect>
        <x>620</x>

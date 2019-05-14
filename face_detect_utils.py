@@ -18,7 +18,7 @@ def detect_and_sub(img, model_path):
     return None
 
 
-def detect_and_lable(img):
+def detect_and_label(img):
     dets = dlib_face_detector(img, 1)
     if len(dets) != 0:
         for detection in dets:
